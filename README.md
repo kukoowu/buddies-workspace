@@ -62,11 +62,10 @@ Install awscli
 
 Install common
 
-
 # Mac OS
 
 ```
-xcode-select —-install
+xcode-select --install
 ```
 
 Install brew, iterm2
@@ -90,8 +89,6 @@ Restart a new iterm2 terminal
 ```
 echo $SHELL
 ```
-
-
 
 https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
 
