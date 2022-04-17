@@ -73,7 +73,7 @@ Install brew, iterm2
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew cask install iterm2
+brew cask install iterm2 visual-studio-code
 
 ```
 
@@ -85,13 +85,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 upgrade_oh_my_zsh
 ```
 
-Restart a new terminal
+Restart a new iterm2 terminal
 
 ```
 echo $SHELL
 ```
 
-Configuration
+
+
+https://medium.com/ayuth/iterm2-zsh-oh-my-zsh-the-most-power-full-of-terminal-on-macos-bdb2823fb04c
 
 - Themes
 - Plugins
@@ -103,7 +105,7 @@ Configuration
 - graphql
 - rest
 - django, flask
-- express,
+- express
 
 # Web3 developpment
 
