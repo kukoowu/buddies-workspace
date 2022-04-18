@@ -1,4 +1,5 @@
 # My MacOS and Windows WSL setup scripts and dotfiles
+https://www.darraghoriordan.com/2022/01/28/developer-shell-modern-bat-fzf-antigen-zsh-wsl-mac/
 
 ## Overview
 
