@@ -1,3 +1,42 @@
+
+# notes
+coding learn
+- os vs programming languages vs programming frameworks
+- linux commands
+- |, ; , &&, tee, >, >>,
+- filesystems: cd, ., .., mkdir, rm -rf, full path vs relative, mv, pwd, find, ls, ll
+- files: cat, tail, less, touch, more, source, tar, diff, wc, EOF
+- editor: touch, vi, nano
+- strings: grep, awsk, sed, sort, echo regex
+- env vars: set, export, alias, acripts
+- iam: whoami, chmod, sudo su, exit
+- commands: man, —help, history
+- processes: ps, kill, top, shutdown now
+- network: ssh, scp, curl, wget, dig, whois, ifconfig, hostname -i
+- terminal shortcuts, ctrl c d e a f
+- editor: vim, nano
+- tools
+- installation steps
+- shell: zsh vs bash vs shell, ohmyzsh, $SHELL, chsh
+- 
+- fzf
+- better grep = ripgrep
+- iterm2: shortcuts, themes, 
+- smart autocompletion = fig
+- better cat = bat
+- better ls = exa
+- aliases
+- package mamager: brew, apt, yum, pip,  npm antigen
+- docker, kubectl, kubectx, terraform,
+- pyenv, 
+- vscode, extensions: intellegi
+- aws cli
+- node, react
+- web2
+- web3
+- data science
+- git branch strategies
+- markdowns
 # Installation guide
 - git, zsh, ohmyzsh
 - VS code, extensions
