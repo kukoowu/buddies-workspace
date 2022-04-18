@@ -1,5 +1,4 @@
-# Common
-
+# Installation guide
 - git, zsh, ohmyzsh
 - VS code, extensions
 - linux aliases
@@ -7,74 +6,145 @@
 
 # Windows
 
-Install WSL Ubuntu 18.04
+## WSL Ubuntu 18.04
 
-https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?SilentAuth=1&wa=wsignin1.0
-https://docs.microsoft.com/en-us/windows/wsl/install
+- https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q?SilentAuth=1&wa=wsignin1.0
+  https://docs.microsoft.com/en-us/windows/wsl/install
 
+```powershell
+  wsl --install
+  
 ```
-# powershell
-wsl --install
+```bash
+  wsl
+  sudo apt-get update
+  ln -s /mnt/c/Users/lk_le/Downloads Downloads
+  #mkdir $HOME/utils
 ```
 
-Create symlinks
-
-```
-ln -s /mnt/c/Users/lk_le/Downloads Downloads
-```
-
-Install Windows Terminal
-
-https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab
-
+## Graphical Apps
+### Windows Terminal
+- https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab
 - color scheme = One Half Dark
 
-Install git
+### VS Code
+- https://code.visualstudio.com/docs/remote/wsl
+- https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
-```
-sudo apt-get update
-sudo apt-get install git
-```
-
-Install zsh
-
-```
-apt-get update
-sudo apt install zsh
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)""
-
-# ~/.zshrc
-plugins=(themes,git,aliases,common-aliases,history,aws,gcloud,docker,kubectl,kubectx,pyenv,terraform)
-```
-
-Install docker
-
-Install kubectl
-
-Install terraform
-
-Install gcloud
-
-https://cloud.google.com/sdk/docs/install#linux
-
-Install awscli
-
-Install common
+### Docker desktop
+- https://docs.docker.com/desktop/windows/wsl/
 
 # Mac OS
-
 ```
 xcode-select --install
 ```
 
-Install brew, iterm2
+# Package Manager (Homebrew)
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# LinuxBrew only
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt-get install build-essential
+brew install gcc
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew cask install iterm2 visual-studio-code
 
+## brew 
+
+## iterm2
 ```
+# MaC OS only (not WSL)
+brew cask install iterm2 
+```
+## VS Code
+```
+brew cask install visual-studio-code
+```
+
+# Homebrew
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+## git
+```bash
+#sudo apt-get install git
+brew install git
+```
+## zsh
+```bash
+sudo apt install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+```vim
+# ~/.zshrc
+plugins=(themes,git,aliases,common-aliases,history,aws,gcloud,docker,kubectl,kubectx,pyenv,terraform)
+```
+
+## docker
+- https://docs.docker.com/desktop/windows/wsl/
+
+## kubectl
+- https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+## terraform
+- https://learn.hashicorp.com/tutorials/terraform/install-cli
+
+```bash
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install terraform
+```
+### chtf
+- https://github.com/Yleisradio/chtf
+
+```bash
+cd $HOME/utils
+curl -L -o chtf-2.1.1.tar.gz https://github.com/Yleisradio/chtf/archive/v2.1.1.tar.gz
+tar -xzvf chtf-2.1.1.tar.gz
+cd chtf-2.1.1/
+make install
+echo "1.0.11" > $HOME/.terraform-version
+~/.zshrc
+######################################################################
+# chtf
+if [[ -f "$HOME/share/chtf/chtf.sh" ]]; then
+    source "$HOME/share/chtf/chtf.sh"
+fi
+if [[ -f "$HOME/.terraform-version" ]]; then
+    chtf "$(< "$HOME/.terraform-version")"
+fi
+```
+
+### terragrunt
+
+### uninstall
+
+
+## awscli
+### install
+
+### uninstall
+## gcloud
+### install
+https://cloud.google.com/sdk/docs/install#linux
+```bash
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-381.0.0-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-381.0.0-linux-x86_64.tar.gz -C $HOME
+$HOME/google-cloud-sdk/install.sh
+sudo mkdir /usr/share/google-cloud-sdk/
+sudo cp $HOME/google-cloud-sdk/completion.bash.inc /usr/share/google-cloud-sdk/completion.zsh.inc
+```
+uninstall
+- https://cloud.google.com/sdk/docs/uninstall-cloud-sdk
+```bash
+rm -rf /usr/share/google-cloud-sdk/
+```
+Install common
+
+
 
 Install zsh, ohmyzsh
 
