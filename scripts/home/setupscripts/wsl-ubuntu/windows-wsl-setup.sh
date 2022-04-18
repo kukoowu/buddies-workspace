@@ -44,7 +44,7 @@ sudo apt-get update
 sudo apt-get install helm
 
 #Azure cli
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+#curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 # nvm and nodejs
 print_sep "installing nvm"
